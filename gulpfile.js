@@ -16,22 +16,19 @@ global.$ = {
   rimraf: require('rimraf'),
   webpack: require('webpack'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')({
-    rename: {
-      'gulp-replace-task': 'replace'
-    }
-  })
+  gp: require('gulp-load-plugins')()
 };
 
 // TASKS
 // - - - - - - - - - - - - - - -
-$.path.tasks.forEach(taskPath =>  require(taskPath)());
+$.path.tasks.forEach(taskPath => require(taskPath)());
 
 $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'sass',
     // 'sass:foundation',
+    'sprite:svg',
     'pug',
     'js:process',
     'copy:fonts'
@@ -48,6 +45,7 @@ $.gulp.task('build', $.gulp.series(
   $.gulp.parallel(
     'sass',
     // 'sass:foundation',
+    'sprite:svg',
     'pug',
     'js:process',
     'copy:fonts'
