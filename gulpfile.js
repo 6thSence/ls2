@@ -10,7 +10,6 @@ global.$ = {
     app: require('./gulp/paths/app.js'),
     tasks: require('./gulp/paths/tasks.js'),
     foundation: require('./gulp/paths/foundation.js'),
-    template: require('./gulp/paths/template.js'),
     sass: require('./gulp/paths/sass.js')
   },
   gulp: require('gulp'),
@@ -33,7 +32,7 @@ $.gulp.task('default', $.gulp.series(
   $.gulp.parallel(
     'sass',
     // 'sass.foundation',
-    'jade',
+    'pug',
     'js.process'
   ),
   $.gulp.parallel(
@@ -48,7 +47,7 @@ $.gulp.task('build', $.gulp.series(
   $.gulp.parallel(
     'sass',
     // 'sass.foundation',
-    'jade',
+    'pug',
     'js.process'
   )
 ));
