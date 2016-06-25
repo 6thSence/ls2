@@ -1,32 +1,30 @@
-$prefix: '';
-
 // -----------------------------------------
-// Layout Breakpoints
+// Fonts
 // -----------------------------------------
 
-$grid-gutter: 10;
+$font-family-1:                             'Proxima nova', 'Arial', sans-serif;
+$font-family-2:                             'Panton', 'Arial', sans-serif;
+
+$font-bold:                                 600;
+$font-light:                                300;
+$font-semibold:                             600;
+
+$font-size-base:                            16px;
+
+
+// -----------------------------------------
+// Colors
+// -----------------------------------------
+
+
+// -----------------------------------------
+// Other
+// -----------------------------------------
+
+$grid-gutter:                               10;
+
 $breakpoints: (
-  'medium': (min-width: 800px),
-  'large': (min-width: 1000px),
-  'huge': (min-width: 1200px),
+                                            'medium': ( min-width: 800px  ),
+                                            'large':  ( min-width: 1000px ),
+                                            'huge':   ( min-width: 1200px ),
 );
-
-
-// -----------------------------------------
-// Font Sizes
-// -----------------------------------------
-
-$base-text-size: 16px;
-
-
-// -----------------------------------------
-// Font Families
-// -----------------------------------------
-
-$base-font: Helvetica, Arial, sans-serif;
-
-// -----------------------------------------
-// Color
-// -----------------------------------------
-
-$base-text-color: #262626;

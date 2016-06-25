@@ -1,0 +1,15 @@
+:root {
+  font: $font-light $font-size-base $font-family-1;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root,
+body {
+  min-height: 100%;
+}

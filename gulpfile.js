@@ -31,9 +31,10 @@ $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'sass',
-    // 'sass.foundation',
+    // 'sass:foundation',
     'pug',
-    'js.process'
+    'js:process',
+    'copy:fonts'
   ),
   $.gulp.parallel(
     'watch',
@@ -46,8 +47,9 @@ $.gulp.task('build', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'sass',
-    // 'sass.foundation',
+    // 'sass:foundation',
     'pug',
-    'js.process'
+    'js:process',
+    'copy:fonts'
   )
 ));
