@@ -5,7 +5,7 @@
 $font-family-1:                             'Proxima nova', 'Arial', sans-serif;
 $font-family-2:                             'Panton', 'Arial', sans-serif;
 
-$font-bold:                                 600;
+$font-bold:                                 700;
 $font-light:                                300;
 $font-semibold:                             600;
 
@@ -24,7 +24,7 @@ $font-size-base:                            16px;
 $grid-gutter:                               10;
 
 $breakpoints: (
-                                            'medium': ( min-width: 800px  ),
-                                            'large':  ( min-width: 1000px ),
-                                            'huge':   ( min-width: 1200px ),
+  'medium': ( min-width: 800px  ),
+  'large':  ( min-width: 1000px ),
+  'huge':   ( min-width: 1200px ),
 );

@@ -1,5 +1,6 @@
 files:
-  include: '**/*.s+(a|c)ss'
+  include: '**/*.scss'
+  ignore: 'source/style/base/_fonts.scss'
 
 options:
   formatter: stylish
