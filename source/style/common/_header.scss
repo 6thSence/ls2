@@ -1,0 +1,49 @@
+.header {
+  $header-bottom-height: 60px;
+  padding: 55px 0 (55px + $header-bottom-height);
+  position: relative;
+  background: center no-repeat / cover;
+
+  &_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $header-bottom-height;
+    background: rgba(#f1f1f1, 0.9);
+  }
+
+  &_search {
+    position: relative;
+    height: $header-bottom-height;
+    width: 380px;
+    float: right;
+    margin-top: 10px;
+
+    .icon {
+      position: absolute;
+      top: 12px;
+      left: 20px;
+    }
+  }
+
+  &_search-field {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 0 10px 0 45px;
+    border: 1px solid transparent;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    outline: 0;
+
+    &:focus {
+      border-color: #28bbf0;
+    }
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+}

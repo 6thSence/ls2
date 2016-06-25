@@ -1,0 +1,53 @@
+.user-panel {
+  $user-panel-photo-size: 125px;
+  position: relative;
+  padding-left: $user-panel-photo-size + 45px;
+  min-height: $user-panel-photo-size;
+
+  &_name {
+    padding-bottom: 10px;
+    font: $font-bold 21px $font-family-2;
+    letter-spacing: -0.8px;
+    color: #fff;
+  }
+
+  &_description {
+    width: 450px;
+    padding-bottom: 25px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &_social {
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .icon {
+      opacity: 0.8;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &_photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $user-panel-photo-size;
+    height: $user-panel-photo-size;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: cener no-repeat / cover;
+  }
+}

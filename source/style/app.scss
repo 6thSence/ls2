@@ -18,6 +18,15 @@
 
 
 // ------------------------------------------
+// Common
+//-------------------------------------------
+
+@import 'common/header';
+@import 'common/user-panel';
+@import 'common/icons';
+
+
+// ------------------------------------------
 // Layout
 // ------------------------------------------
 
@@ -29,3 +38,10 @@
 //-------------------------------------------
 
 @import 'pages/index';
+
+.container {
+  $padding: 20px;
+  width: 1180px + $padding;
+  padding: 0 $padding;
+  margin: auto;
+}

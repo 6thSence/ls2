@@ -1,7 +1,28 @@
 extends ../template.pug
 
 block variables
-  - var title = 'index';
+  - var title = 'Альбомы';
 
 block content
-  h1 base template
+  header.header(style="background-image: url('/assets/img/bg-user.jpg');")
+    .container
+      .user-panel
+        .user-panel_name Александра Соколова
+        p.user-panel_description Я веб разработчик. Мне 24 года. Люблю путешествия, кодинг, фриланс и активный отдых.
+        .user-panel_social
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+            +icon('soc-vk', ['icon-20', 'icon-light'])
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+            +icon('soc-facebook', ['icon-20', 'icon-light'])
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+            +icon('soc-twitter', ['icon-20', 'icon-light'])
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+            +icon('soc-google', ['icon-20', 'icon-light'])
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+            +icon('soc-mail', ['icon-20', 'icon-light'])
+        .user-panel_photo(style="background-image: url('/assets/img/user-photo.jpg');")
+    .header_bottom
+      .container
+        .header_search
+          input.header_search-field(type="text" placeholder="Исследовать мир")
+          +icon('search', ['icon-15', 'icon-gray'])
