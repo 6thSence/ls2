@@ -1,0 +1,18 @@
+include mixins/index.pug
+
+block variables
+
+include common/head.pug
+
+body
+  block content
+
+footer.footer(style="background-image: url('/assets/img/bg-user.jpg');")
+  .container
+    .footer_side
+      p.footer_text Перед вами сервис, который поможет вам организовать свои фотографии в альбомы и поделиться ими со всем миром!
+    .footer_center
+      a.footer_go-to-top(href="#" title="Наверх")
+        +icon('top', ['icon-20', 'icon-light'])
+    .footer_side
+      p.footer_copy 2016 | Создано командой профессионалов на продвинутом курсепо веб-разработке от LoftSchool

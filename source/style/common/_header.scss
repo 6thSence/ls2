@@ -3,6 +3,7 @@
   padding: 55px 0 (55px + $header-bottom-height);
   position: relative;
   background: center no-repeat / cover;
+  flex-shrink: 0;
 
   &_bottom {
     position: absolute;

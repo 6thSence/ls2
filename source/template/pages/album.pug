@@ -1,7 +1,7 @@
 extends ../base.pug
 
 block variables
-  - var title = 'Альбомы';
+  - var title = 'Альбом';
 
 block content
   header.header(style="background-image: url('/assets/img/bg-user.jpg');")
@@ -30,8 +30,6 @@ block content
   main.main
     section.section
       .container
-        .section_header
-          h1.section_title Альбомы
         .thumbs
           each val in [1, 2, 3, 4, 5]
             article.thumb

@@ -1,0 +1,45 @@
+extends ../welcome.pug
+
+block variables
+  - var title = 'Welcome';
+
+block content
+  .welcome
+    .welcome_container
+      .welcome_title Добро пожаловать
+      .welcome_description Перед вами сервис, который поможет вам организовать свои фотографии в альбомы и поделиться ими со всем миром!
+
+      form.welcome_form(method="post" action="/" name="sign-in")
+        .welcome_form-body
+          fieldset.welcome_fieldset
+            label.welcome_label
+              +icon('mail', ['icon-15', 'icon-silver'])
+              input(type="email" class="welcome_field" placeholder="Электронная почта")
+            label.welcome_label
+              +icon('lock', ['icon-15', 'icon-silver'])
+              input(type="password" class="welcome_field" placeholder="Пароль")
+          .welcome_form-bottom
+            a(href="#") Забыли пароль?
+            button(type="submit").welcome_button Войти
+            div
+              | Нет аккаунта?
+              a(href="#" data-behavior="view-sign-up")  Регистрация
+
+      form.welcome_form.is-hidden(method="post" action="/" name="sign-up" hidden)
+        .welcome_form-body
+          fieldset.welcome_fieldset
+            label.welcome_label
+              +icon('person', ['icon-15', 'icon-silver'])
+              input(type="text" class="welcome_field" placeholder="Имя")
+            label.welcome_label
+              +icon('mail', ['icon-15', 'icon-silver'])
+              input(type="email" class="welcome_field" placeholder="Электронная почта")
+            label.welcome_label
+              +icon('lock', ['icon-15', 'icon-silver'])
+              input(type="password" class="welcome_field" placeholder="Пароль")
+          .welcome_form-bottom
+            button(type="submit").welcome_button Создать аккаунт
+
+            div
+              | Уже зарегистрированы?
+              a(href="#" data-behavior="view-sign-in")  Войти

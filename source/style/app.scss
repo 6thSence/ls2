@@ -22,6 +22,7 @@
 //-------------------------------------------
 
 @import 'common/icons';
+@import 'common/welcome';
 @import 'common/header';
 @import 'common/user-panel';
 @import 'common/footer';
@@ -36,13 +37,6 @@
 @import 'layout/grid';
 
 
-// ------------------------------------------
-// Pages
-//-------------------------------------------
-
-@import 'pages/login';
-@import 'pages/index';
-
 .container {
   @extend %clearfix;
   $padding: 20px;
@@ -54,4 +48,5 @@
 
 .main {
   padding: 50px 0;
+  flex: 1 0 auto;
 }
