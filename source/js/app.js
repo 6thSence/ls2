@@ -1,6 +1,10 @@
 (function() {
   'use strict';
 
+  if (!document.querySelector('.welcome')) {
+    return;
+  }
+
   var states = {
     SIGN_IN: 'sign-in',
     SIGN_UP: 'sign-up'
@@ -46,6 +50,8 @@
     if (!behavior) {
       return;
     }
+
+    e.preventDefault();
 
     switch (behavior) {
       case 'view-sign-in': changeState(states.SIGN_IN); break;
