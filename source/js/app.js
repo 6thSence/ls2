@@ -39,7 +39,7 @@
     activeState = newState;
   }
 
-  document.querySelector('.welcome').addEventListener('click', function(e) {
+  rootEl.addEventListener('click', function(e) {
     var target = e.target;
     var behavior = target.dataset.behavior;
 
