@@ -4,6 +4,11 @@
   padding-left: $user-panel-photo-size + 45px;
   min-height: $user-panel-photo-size;
 
+  &_name,
+  &_description {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
   &_name {
     padding-bottom: 10px;
     font: $font-bold 21px $font-family-2;
@@ -41,6 +46,7 @@
   }
 
   &_photo {
+    overflow: hidden;
     position: absolute;
     left: 0;
     top: 0;

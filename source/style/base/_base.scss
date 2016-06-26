@@ -1,6 +1,8 @@
 :root {
-  font: $font-light $font-size-base $font-family-1;
   box-sizing: border-box;
+  font: $font-light $font-size-base $font-family-1;
+  color: $color-text-base;
+  background: $color-background-base;
 }
 
 *,

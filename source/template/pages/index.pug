@@ -10,15 +10,15 @@ block content
         .user-panel_name Александра Соколова
         p.user-panel_description Я веб разработчик. Мне 24 года. Люблю путешествия, кодинг, фриланс и активный отдых.
         .user-panel_social
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Вконтакте")
             +icon('soc-vk', ['icon-20', 'icon-light'])
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Facebook")
             +icon('soc-facebook', ['icon-20', 'icon-light'])
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Twitter")
             +icon('soc-twitter', ['icon-20', 'icon-light'])
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Google+")
             +icon('soc-google', ['icon-20', 'icon-light'])
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q")
+          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Mail")
             +icon('soc-mail', ['icon-20', 'icon-light'])
         .user-panel_photo(style="background-image: url('/assets/img/user-photo.jpg');")
     .header_bottom
@@ -26,3 +26,32 @@ block content
         .header_search
           input.header_search-field(type="text" placeholder="Исследовать мир")
           +icon('search', ['icon-15', 'icon-gray'])
+
+  main.main
+    section.section
+      .container
+        .section_header
+          h1.section_title Альбомы
+        .thumbs
+          each val in [1, 2, 3, 4, 5]
+            article.thumb
+              a.thumb_img(href="#q")
+                img.thumb_img-el(src="/assets/img/album-preview.jpg" alt="Животные")
+                .thumb_overlay
+                  .thumb_info
+                    .thumb_info-description Фотографии природы леса, енотов и оленей...
+                    .thumb_info-count
+                      span 18
+                      span  Фотографий
+              footer.thumb_footer
+                a.thumb_title(href="#q") Животные
+
+  footer.footer(style="background-image: url('/assets/img/bg-user.jpg');")
+    .container
+      .footer_side
+        p.footer_text Перед вами сервис, который поможет вам организовать свои фотографии в альбомы и поделиться ими со всем миром!
+      .footer_center
+        a.footer_go-to-top(href="#")
+          +icon('top', ['icon-20', 'icon-light'])
+      .footer_side
+        p.footer_copy 2016 | Создано командой профессионалов на продвинутом курсепо веб-разработке от LoftSchool

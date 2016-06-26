@@ -21,9 +21,12 @@
 // Common
 //-------------------------------------------
 
+@import 'common/icons';
 @import 'common/header';
 @import 'common/user-panel';
-@import 'common/icons';
+@import 'common/footer';
+@import 'common/section';
+@import 'common/thumbs';
 
 
 // ------------------------------------------
@@ -40,8 +43,14 @@
 @import 'pages/index';
 
 .container {
+  @extend %clearfix;
   $padding: 20px;
-  width: 1180px + $padding;
+  position: relative;
+  width: 1180px + ($padding * 2);
   padding: 0 $padding;
   margin: auto;
+}
+
+.main {
+  padding: 50px 0;
 }

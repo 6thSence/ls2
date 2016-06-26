@@ -1,0 +1,81 @@
+.thumbs {
+  @extend %clearfix;
+}
+
+.thumb {
+  overflow: hidden;
+  width: 280px;
+  height: 330px;
+  float: left;
+  margin: 0 20px 20px 0;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  &_img {
+    overflow: hidden;
+    display: block;
+    position: relative;
+
+    &:hover .thumb_overlay {
+      opacity: 1;
+    }
+
+    &:hover .thumb_img-el {
+      transition: transform 4s;
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+
+  &_img-el {
+    vertical-align: top;
+    transition: transform 1s;
+  }
+
+  &_overlay {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &_info {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 20px 35px;
+  }
+
+  &_info-description {
+    padding-bottom: 30px;
+    line-height: 1.4;
+  }
+
+  &_info-count {
+    font-family: $font-family-1;
+    font-weight: $font-semibold;
+  }
+
+  &_footer {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+  }
+
+  &_title {
+    margin-left: auto;
+    font: $font-bold 16px $font-family-2;
+    text-decoration: none;
+    color: inherit;
+  }
+}
