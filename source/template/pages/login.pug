@@ -1,0 +1,40 @@
+include ../template.pug
+
+.login
+  .login_container
+    .login_title Добро пожаловать
+    .login_description.
+      Перед вами сервис, который поможет вам организовать свои фотографии в альбомы и поделиться ими со всем миром!
+
+    form.login_form(method="post" action="/")
+      fieldset.login_fieldset
+        label.login_label
+          +icon('mail', ['icon-15', 'icon-silver'])
+          input(type="email" class="login_field" placeholder="Электронная почта")
+        label.login_label
+          +icon('lock', ['icon-15', 'icon-silver'])
+          input(type="password" class="login_field" placeholder="Пароль")
+      .form_bottom
+        a.login_link(href="#") Забыли пароль?
+        button(type="submit").login_button Войти
+        .login_footer
+          span.login_text или
+          a(href="#").login_link зарегистрируйтесь
+  //.login
+    .login_title Регистрация
+    .login_form-wrapper
+      .login_form(method="POST" action="#")
+        label.login_label
+          +icon('soc-vk', ['icon-15', 'icon-silver'])
+          input(type="text" class="login_field" placeholder="Имя")
+        label.login_label
+          +icon('soc-vk', ['icon-15', 'icon-silver'])
+          input(type="email" class="login_field" placeholder="Электронная почта")
+        label.login_label
+          +icon('soc-vk', ['icon-15', 'icon-silver'])
+          input(type="password" class="login_field" placeholder="Пароль")
+        .login_text Ваши данные остаются строго конфеденциальны
+        button(type="submit") Создать аккаунт
+    .login_footer
+      span.login_no-login Уже зарегистрированы?
+      a(href="#").login_link Войти

@@ -51,7 +51,6 @@
     position: absolute;
     bottom: 0;
     color: #fff;
-    text-decoration: none;
     padding: 20px 20px 35px;
   }
 
@@ -75,7 +74,6 @@
   &_title {
     margin-left: auto;
     font: $font-bold 16px $font-family-2;
-    text-decoration: none;
     color: inherit;
   }
 }
