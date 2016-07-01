@@ -2,6 +2,7 @@ extends ../welcome.pug
 
 block variables
   - var title = 'Welcome';
+  - var scripts = ['/assets/js/welcome%=suffix=%.js%=version=%'];
 
 block content
   .welcome
@@ -14,10 +15,10 @@ block content
           fieldset.welcome_fieldset
             label.welcome_label
               +icon('mail', ['icon-15', 'icon-silver'])
-              input(type="email" class="welcome_field" placeholder="Электронная почта")
+              input(type="email" class="welcome_field" placeholder="Электронная почта" name="email" required)
             label.welcome_label
               +icon('lock', ['icon-15', 'icon-silver'])
-              input(type="password" class="welcome_field" placeholder="Пароль")
+              input(type="password" class="welcome_field" placeholder="Пароль" name="password" required)
           .welcome_form-bottom
             a(href="#") Забыли пароль?
             button(type="submit").welcome_button Войти
@@ -28,13 +29,13 @@ block content
           fieldset.welcome_fieldset
             label.welcome_label
               +icon('person', ['icon-15', 'icon-silver'])
-              input(type="text" class="welcome_field" placeholder="Имя")
+              input(type="text" class="welcome_field" placeholder="Имя" name="name" required)
             label.welcome_label
               +icon('mail', ['icon-15', 'icon-silver'])
-              input(type="email" class="welcome_field" placeholder="Электронная почта")
+              input(type="email" class="welcome_field" placeholder="Электронная почта" name="email" required)
             label.welcome_label
               +icon('lock', ['icon-15', 'icon-silver'])
-              input(type="password" class="welcome_field" placeholder="Пароль")
+              input(type="password" class="welcome_field" placeholder="Пароль" name="password" required)
           .welcome_form-bottom
             button(type="submit").welcome_button Создать аккаунт
             div Уже зарегистрированы? <a href data-behavior="view-sign-in">Войти</a>

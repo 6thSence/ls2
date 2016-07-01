@@ -1,6 +1,6 @@
 .header {
   $header-bottom-height: 60px;
-  padding: 55px 0 (55px + $header-bottom-height);
+  height: 300px;
   position: relative;
   background: center no-repeat / cover;
   flex-shrink: 0;
@@ -14,11 +14,34 @@
     background: rgba(#f1f1f1, 0.9);
   }
 
+  &_album-about {
+    width: 700px;
+    margin: 20px auto 0;
+  }
+
+  &_user {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: flex;
+    align-items: center;
+
+    &-photo {
+      @include user-photo(55px);
+    }
+
+    &-name {
+      color: #fff;
+      padding-left: 20px;
+      font-size: 15px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+  }
+
   &_search {
     position: relative;
     width: 380px;
-    float: right;
-    margin-top: 10px;
+    margin-left: auto;
 
     .icon {
       position: absolute;
@@ -34,7 +57,7 @@
     border-radius: $border-radius;
     padding: 0 10px 0 45px;
     border: 1px solid transparent;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.4px;
     outline: 0;
 
@@ -46,5 +69,15 @@
     &::placeholder {
       color: $color-gray;
     }
+  }
+
+  &_bottom .container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  & > .container {
+    padding: 55px 0 (55px + $header-bottom-height);
   }
 }

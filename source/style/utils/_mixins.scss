@@ -1,1 +1,11 @@
 @import 'mixins/scale-arrow';
+
+
+@mixin user-photo($size) {
+  overflow: hidden;
+  width: $size;
+  height: $size;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: center no-repeat / cover;
+}

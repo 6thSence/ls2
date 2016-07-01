@@ -36,6 +36,11 @@
 
 @import 'layout/grid';
 
+// TODO:
+// 1. фон в шапке и футере едет при сужении экрана
+// 2. появляются уголки при ховере на превью альбомов и изображений
+// 3. background-size в ie10
+
 
 .container {
   @extend %clearfix;
@@ -49,4 +54,120 @@
 .main {
   padding: 50px 0;
   flex: 1 0 auto;
+}
+
+.album-about {
+  $album-about-line-height: 1.4;
+  color: #fff;
+  text-align: center;
+  line-height: $album-about-line-height;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+  &_title {
+    margin-bottom: 10px;
+    font-weight: $font-semibold;
+    font-size: 21px;
+  }
+
+  &_description {
+    overflow: hidden;
+    height: 3em * $album-about-line-height; // 3 - the maximum amount of rows
+    font-size: 15px;
+    color: #f5f5f5;
+  }
+}
+
+.album-meta {
+  width: 100%;
+  text-align: center;
+
+  &_item {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: $font-semibold;
+    margin: 0 20px;
+  }
+}
+
+.thumbs_line {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.preview {
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  margin-right: 20px;
+  border-radius: $border-radius;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover .preview_overlay {
+    opacity: 1;
+  }
+
+  &_img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  &_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  &_meta {
+    padding: 20px 25px;
+  }
+
+  &_meta-item {
+    display: inline-block;
+    margin-right: 20px;
+    white-space: nowrap;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+    .icon {
+      padding-right: 8px;
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+.modal {
+  overflow: hidden;
+  width: 680px;
+  max-height: 80vh;
+  margin: auto;
+  background: #fff;
+  border-radius: $border-radius;
+
+  &_img {
+
+    img {
+      width: 100%;
+      vertical-align: top;
+
+    }
+  }
 }

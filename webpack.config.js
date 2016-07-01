@@ -6,7 +6,7 @@ const validate = require('webpack-validator');
 
 let nodeModulesDirectories = path.join(__dirname, 'node_modules');
 let modulesDirectories = [nodeModulesDirectories];
-let inputPath = path.join(__dirname, './source/js/');
+let inputPath = path.join(__dirname, './source/js');
 
 let plugins = [
 
@@ -16,7 +16,10 @@ let plugins = [
 
   new webpack.DefinePlugin({ NODE_ENV: JSON.stringify($.dev ? '__DEV__': '__PROD__') }),
 
-  new webpack.ProvidePlugin({ $: 'jquery' })
+  new webpack.ProvidePlugin({
+    Handlebars: 'handlebars',
+    view: `${inputPath}/view`
+  })
 ];
 
 let loaders = [
@@ -51,6 +54,7 @@ let webpackConfig = {
 
     entry: {
       app: './app.js',
+      welcome: './welcome.js',
       foundation: []
     },
 

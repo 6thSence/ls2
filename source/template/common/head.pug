@@ -16,6 +16,9 @@ head
 
   script(src="/assets/js/foundation%=suffix=%.js%=version=%" defer)
   script(src="/assets/js/app%=suffix=%.js%=version=%" defer)
+  each src in (scripts) ? scripts : []
+    script(src=src defer)
+
 
   <!--[if lt IE 9]>
   script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")

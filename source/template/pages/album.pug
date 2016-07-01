@@ -4,42 +4,41 @@ block variables
   - var title = 'Альбом';
 
 block content
-  header.header(style="background-image: url('/assets/img/bg-user.jpg');")
+  header.header(style="background-image: url('/assets/img/bg-album.jpg');")
     .container
-      .user-panel
-        .user-panel_name Александра Соколова
-        p.user-panel_description Я веб разработчик. Мне 24 года. Люблю путешествия, кодинг, фриланс и активный отдых.
-        .user-panel_social
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Вконтакте")
-            +icon('soc-vk', ['icon-20', 'icon-light'])
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Facebook")
-            +icon('soc-facebook', ['icon-20', 'icon-light'])
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Twitter")
-            +icon('soc-twitter', ['icon-20', 'icon-light'])
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Google+")
-            +icon('soc-google', ['icon-20', 'icon-light'])
-          a.user-panel_social-item(target="_blank" rel="nofollow" href="#q" title="Mail")
-            +icon('soc-mail', ['icon-20', 'icon-light'])
-        .user-panel_photo(style="background-image: url('/assets/img/user-photo.jpg');")
+      a.header_user(href="/")
+        .header_user-photo(style="background-image: url('/assets/img/user-photo.jpg');")
+        .header_user-name Александра Соколова
+      .header_album-about
+        .album-about
+          h1.album-about_title Лесные прогулки
+          p.album-about_description Фотографии природы леса, енотов и оленей. Как прекрасно сойти на дальней станции и пройтись по полю босиком. И чтобы никто не беспокоил бродить влюбленным в тишину. Запах мёда, лесных оленей и енотов будоражит нутро.
     .header_bottom
       .container
-        .header_search
-          input.header_search-field(type="text" placeholder="Исследовать мир")
-          +icon('search', ['icon-15', 'icon-gray'])
+        .album-meta
+          .album-meta_item 18 Фотографий
+          .album-meta_item 12 Лайков
+          .album-meta_item 4 Коментария
 
   main.main
     section.section
       .container
         .thumbs
-          each val in [1, 2, 3, 4, 5]
-            article.thumb
-              a.thumb_img(href="/album.html")
-                img.thumb_img-el(src="/assets/img/album-preview.jpg" alt="Животные")
-                .thumb_overlay
-                  .thumb_info
-                    .thumb_info-description Фотографии природы леса, енотов и оленей...
-                    .thumb_info-count
-                      span 18
-                      span  Фотографий
-              footer.thumb_footer
-                a.thumb_title(href="/album.html") Животные
+          each i in [1, 2]
+            .thumbs_line
+              each j in [1, 2, 3]
+                a.preview(href="/album.html")
+                  img.preview_img(src="/assets/img/img-preview.jpg" alt="Животные")
+                  .preview_overlay
+                    .preview_meta
+                      .preview_meta-item
+                        +icon('comments', ['icon-30', 'icon-light'])
+                        span 54
+                      .preview_meta-item
+                        +icon('like', ['icon-30', 'icon-light'])
+                        span 23
+
+  .modal-overlay(style="display: none;")
+    .modal
+      .modal_img
+        img(src="/assets/img/img-origin.jpg")

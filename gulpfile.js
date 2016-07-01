@@ -32,7 +32,8 @@ $.gulp.task('default', $.gulp.series(
     'pug',
     'js:process',
     'copy:fonts',
-    'copy:images'
+    'copy:images',
+    'copy:resource'
   ),
   $.gulp.parallel(
     'watch',
@@ -50,6 +51,7 @@ $.gulp.task('build', $.gulp.series(
     'pug',
     'js:process',
     'copy:fonts',
-    'copy:images'
+    'copy:images',
+    'copy:resource'
   )
 ));
